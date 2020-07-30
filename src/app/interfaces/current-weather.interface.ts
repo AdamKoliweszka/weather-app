@@ -5,7 +5,7 @@ import { Wind } from "./wind.interface";
 import { Clouds } from "./clouds.interface";
 import { Sys } from "./sys.interface";
 
-export interface CurrentWeatherResponse {
+export interface CurrentWeather {
   coord: Coordinate;
   weather: Weather[];
   base: string;

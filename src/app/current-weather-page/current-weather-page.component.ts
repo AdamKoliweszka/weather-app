@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { CurrentWeatherApiService } from "../services/current-weather-api.service";
-import { CurrentWeatherResponse } from "../interfaces/current-weather-response.interface";
+import { CurrentWeatherDataContainerService } from "../services/current-weather-data-container.service";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-current-weather-page",
@@ -8,14 +8,17 @@ import { CurrentWeatherResponse } from "../interfaces/current-weather-response.i
   styleUrls: ["./current-weather-page.component.sass"],
 })
 export class CurrentWeatherPageComponent implements OnInit {
-  currentWeather: CurrentWeatherResponse;
-  constructor(private currentWeatherApiService: CurrentWeatherApiService) {}
+  constructor(
+    private currentWeatherDataContainerService: CurrentWeatherDataContainerService
+  ) {}
 
   ngOnInit() {}
 
   refreshWeather() {
-    this.currentWeatherApiService.getActualWeather().subscribe((value) => {
-      this.currentWeather = value;
-    });
+    this.currentWeatherDataContainerService.loadCurrentWeather();
+  }
+
+  get currentTemperature$(): Observable<number> {
+    return this.currentWeatherDataContainerService.temperature;
   }
 }
