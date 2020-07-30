@@ -3,6 +3,7 @@ import { CurrentWeatherResponse } from "../interfaces/current-weather-response.i
 import { Store } from "@ngrx/store";
 import * as CurrentWeatherSelectors from "../current-weather-state/current-weather-state.selectors";
 import * as CurrentWeatherActions from "../current-weather-state/current-weather-state.actions";
+import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: "root",
@@ -18,22 +19,22 @@ export class CurrentWeatherDataContainerService {
       CurrentWeatherActions.setCurrentWeather({ currentWeather })
     );
   }
-  get temperature() {
+  get temperature(): Observable<number> {
     return this.store.select(CurrentWeatherSelectors.selectTemperature);
   }
-  get feelsTemperature() {
+  get feelsTemperature(): Observable<number> {
     return this.store.select(CurrentWeatherSelectors.selectFeelsTemperature);
   }
-  get minTemperature() {
+  get minTemperature(): Observable<number> {
     return this.store.select(CurrentWeatherSelectors.selectMinTemperature);
   }
-  get maxTemperature() {
+  get maxTemperature(): Observable<number> {
     return this.store.select(CurrentWeatherSelectors.selectMaxTemperature);
   }
-  get pressure() {
+  get pressure(): Observable<number> {
     return this.store.select(CurrentWeatherSelectors.selectPressure);
   }
-  get humidity() {
+  get humidity(): Observable<number> {
     return this.store.select(CurrentWeatherSelectors.selectHumidity);
   }
 }
