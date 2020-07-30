@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { CurrentWeatherResponse } from "../interfaces/current-weather-response.interface";
 import { CurrentWeatherDataContainerService } from "../services/current-weather-data-container.service";
 import { Observable } from "rxjs";
 

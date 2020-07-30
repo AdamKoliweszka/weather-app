@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { CurrentWeatherResponse } from "../interfaces/current-weather-response.interface";
+import { CurrentWeather } from "../interfaces/current-weather.interface";
 import { Store } from "@ngrx/store";
 import * as CurrentWeatherSelectors from "../current-weather-state/current-weather-state.selectors";
 import * as CurrentWeatherActions from "../current-weather-state/current-weather-state.actions";
@@ -9,12 +9,12 @@ import { Observable } from "rxjs";
   providedIn: "root",
 })
 export class CurrentWeatherDataContainerService {
-  constructor(private store: Store<CurrentWeatherResponse>) {}
+  constructor(private store: Store<CurrentWeather>) {}
 
   loadCurrentWeather() {
     this.store.dispatch(CurrentWeatherActions.loadCurrentWeather());
   }
-  setCurrentWeather(currentWeather: CurrentWeatherResponse) {
+  setCurrentWeather(currentWeather: CurrentWeather) {
     this.store.dispatch(
       CurrentWeatherActions.setCurrentWeather({ currentWeather })
     );

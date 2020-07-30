@@ -1,8 +1,8 @@
 import * as currentWeatherActions from "./current-weather-state.actions";
 import { createReducer, on, Action } from "@ngrx/store";
-import { CurrentWeatherResponse } from "../interfaces/current-weather-response.interface";
+import { CurrentWeather } from "../interfaces/current-weather.interface";
 
-const initialState: CurrentWeatherResponse = {
+const initialState: CurrentWeather = {
   coord: null,
   weather: null,
   base: null,
@@ -25,9 +25,6 @@ const currentWeatherReducer = createReducer(
   }))
 );
 
-export function reducer(
-  state: CurrentWeatherResponse | undefined,
-  action: Action
-) {
+export function reducer(state: CurrentWeather | undefined, action: Action) {
   return currentWeatherReducer(state, action);
 }

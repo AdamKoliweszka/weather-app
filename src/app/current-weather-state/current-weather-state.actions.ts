@@ -1,9 +1,9 @@
 import { createAction, props } from "@ngrx/store";
-import { CurrentWeatherResponse } from "../interfaces/current-weather-response.interface";
+import { CurrentWeather } from "../interfaces/current-weather.interface";
 
 export const setCurrentWeather = createAction(
   "[CURRENT_WEATHER] Set current weather",
-  props<{ currentWeather: CurrentWeatherResponse }>()
+  props<{ currentWeather: CurrentWeather }>()
 );
 
 export const loadCurrentWeather = createAction(
