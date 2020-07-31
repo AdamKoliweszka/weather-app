@@ -13,6 +13,7 @@ import { CurrentWeatherStateModule } from "./current-weather-state/current-weath
 import { CurrentWeatherWidgedComponent } from "./current-weather-widged/current-weather-widged.component";
 import { WidgedRefreshButtonComponent } from './widged-refresh-button/widged-refresh-button.component';
 import { WidgedTemperatureComponent } from './widged-temperature/widged-temperature.component';
+import { TemperatureToCelsiusPipe } from './temperature-to-celsius.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { WidgedTemperatureComponent } from './widged-temperature/widged-temperat
     CurrentWeatherWidgedComponent,
     WidgedRefreshButtonComponent,
     WidgedTemperatureComponent,
+    TemperatureToCelsiusPipe,
   ],
   imports: [
     BrowserModule,
