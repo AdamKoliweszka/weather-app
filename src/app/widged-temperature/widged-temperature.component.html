@@ -1,7 +1,9 @@
-<div class="container">{{ temperature | temperatureToCelsius }}°C</div>
+<div class="container">
+  {{ temperature | temperatureToCelsius | number: "1.1-1" }}°C
+</div>
 <div class="container-temperature-amplitude">
   <img src="../../assets/icons8-up-16.png" />
-  <span>{{ minTemperature | temperatureToCelsius }}°C</span>
+  <span>{{ minTemperature | temperatureToCelsius | number: "1.1-1" }}°C</span>
   <img src="../../assets/icons8-down-arrow-16.png" />
-  <span>{{ maxTemperature | temperatureToCelsius }}°C</span>
+  <span>{{ maxTemperature | temperatureToCelsius | number: "1.1-1" }}°C</span>
 </div>
