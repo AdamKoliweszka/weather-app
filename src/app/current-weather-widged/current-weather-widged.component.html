@@ -1,4 +1,8 @@
 <div class="container">
-  <button (click)="refreshWeather()">Refresh</button>
-  {{ currentTemperature }}
+  <div class="refresh-button">
+    <app-widged-refresh-button
+      (clickButton)="refreshWeather()"
+    ></app-widged-refresh-button>
+  </div>
+  {{ currentTemperature$ | async }}
 </div>

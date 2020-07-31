@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { CurrentWeather } from "../interfaces/current-weather.interface";
+import { CurrentWeatherAutoRefreshService } from "../services/current-weather-auto-refresh.service";
+import { CurrentWeatherDataContainerService } from "../services/current-weather-data-container.service";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-current-weather-widged",
@@ -8,7 +11,18 @@ import { CurrentWeather } from "../interfaces/current-weather.interface";
 })
 export class CurrentWeatherWidgedComponent implements OnInit {
   @Input() currentTemperature: number;
-  constructor() {}
+  constructor(
+    private currentWeatherAutoRefreshService: CurrentWeatherAutoRefreshService,
+    private currentWeatherDataContainerService: CurrentWeatherDataContainerService
+  ) {}
 
   ngOnInit() {}
+
+  refreshWeather() {
+    this.currentWeatherDataContainerService.loadCurrentWeather();
+  }
+
+  get currentTemperature$(): Observable<number> {
+    return this.currentWeatherDataContainerService.temperature;
+  }
 }

@@ -11,12 +11,14 @@ import { environment } from "src/environments/environment";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { CurrentWeatherStateModule } from "./current-weather-state/current-weather-state.module";
 import { CurrentWeatherWidgedComponent } from "./current-weather-widged/current-weather-widged.component";
+import { WidgedRefreshButtonComponent } from './widged-refresh-button/widged-refresh-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CurrentWeatherPageComponent,
     CurrentWeatherWidgedComponent,
+    WidgedRefreshButtonComponent,
   ],
   imports: [
     BrowserModule,
