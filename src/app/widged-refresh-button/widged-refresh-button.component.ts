@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter, Input } from "@angular/core";
 
 @Component({
   selector: "app-widged-refresh-button",
@@ -6,6 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
   styleUrls: ["./widged-refresh-button.component.scss"],
 })
 export class WidgedRefreshButtonComponent implements OnInit {
+  @Input() isInRefreshingState: boolean;
   @Output() clickButton = new EventEmitter<void>();
 
   constructor() {}
@@ -13,6 +14,6 @@ export class WidgedRefreshButtonComponent implements OnInit {
   ngOnInit() {}
 
   refreshWeather() {
-    this.clickButton.emit();
+    if (!this.isInRefreshingState) this.clickButton.emit();
   }
 }

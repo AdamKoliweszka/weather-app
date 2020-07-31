@@ -3,6 +3,9 @@
     src="../../assets/icons8-refresh.svg"
     alt="Refresh button"
     (click)="refreshWeather()"
-    class="refresh-icon"
+    [ngClass]="{
+      'refresh-icon': !isInRefreshingState,
+      'in-refreshing-state': isInRefreshingState
+    }"
   />
 </div>
