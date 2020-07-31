@@ -20,6 +20,9 @@
 
 .temperature {
   grid-area: temperature;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .calculate-info {
@@ -28,6 +31,9 @@
 
 .status-icon {
   grid-area: status-icon;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .humidity-level {
