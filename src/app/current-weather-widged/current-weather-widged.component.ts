@@ -25,4 +25,10 @@ export class CurrentWeatherWidgedComponent implements OnInit {
   get currentTemperature$(): Observable<number> {
     return this.currentWeatherDataContainerService.temperature;
   }
+  get minTemperature$(): Observable<number> {
+    return this.currentWeatherDataContainerService.minTemperature;
+  }
+  get maxTemperature$(): Observable<number> {
+    return this.currentWeatherDataContainerService.maxTemperature;
+  }
 }

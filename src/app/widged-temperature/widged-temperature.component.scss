@@ -3,3 +3,11 @@
   color: white;
   text-align: center;
 }
+
+.container-temperature-amplitude {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 2vh;
+  color: white;
+}

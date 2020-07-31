@@ -7,6 +7,8 @@
   <div class="temperature">
     <app-widged-temperature
       [temperature]="currentTemperature$ | async"
+      [maxTemperature]="maxTemperature$ | async"
+      [minTemperature]="minTemperature$ | async"
     ></app-widged-temperature>
   </div>
 </div>

@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class WidgedTemperatureComponent implements OnInit {
   @Input() temperature: number;
+  @Input() minTemperature: number;
+  @Input() maxTemperature: number;
   constructor() {}
 
   ngOnInit() {}
