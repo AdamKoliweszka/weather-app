@@ -1,7 +1,7 @@
 .container {
   background: linear-gradient(#aeb1b8, #39415a);
-  // background: linear-gradient(#D75B05 ,#D83401 )
-  // background: linear-gradient(#38528D ,#111F62 )
+  //background: linear-gradient(#d75b05, #d83401);
+  //background: linear-gradient(#38528d, #111f62);
   width: 33vw;
   height: 33vh;
   border-radius: 4vh;
@@ -11,7 +11,7 @@
   grid-template-areas:
     "calculate-info header header header refresh-button"
     "temperature main . sidebar status-icon"
-    "footer footer footer footer footer";
+    "humidity-level footer footer footer footer";
 }
 
 .refresh-button {
@@ -28,4 +28,8 @@
 
 .status-icon {
   grid-area: status-icon;
+}
+
+.humidity-level {
+  grid-area: humidity-level;
 }

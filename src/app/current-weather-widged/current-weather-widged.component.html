@@ -20,4 +20,10 @@
   <div class="status-icon">
     <app-weather-status [iconId]="iconId$ | async"></app-weather-status>
   </div>
+
+  <div class="humidity-level">
+    <app-humiditi-level
+      [humidityLevel]="humidityLevel$ | async"
+    ></app-humiditi-level>
+  </div>
 </div>

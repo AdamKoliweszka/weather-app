@@ -43,4 +43,8 @@ export class CurrentWeatherWidgedComponent implements OnInit {
   get iconId$(): Observable<string> {
     return this.currentWeatherDataContainerService.iconId;
   }
+
+  get humidityLevel$(): Observable<number> {
+    return this.currentWeatherDataContainerService.humidity;
+  }
 }
