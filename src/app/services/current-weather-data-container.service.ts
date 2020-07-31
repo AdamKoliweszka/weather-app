@@ -37,6 +37,9 @@ export class CurrentWeatherDataContainerService {
   get humidity(): Observable<number> {
     return this.store.select(CurrentWeatherSelectors.selectHumidity);
   }
+  get cloudiness(): Observable<number> {
+    return this.store.select(CurrentWeatherSelectors.selectCloudiness);
+  }
   get dataOfCalculation(): Observable<Date> {
     return this.store.select(CurrentWeatherSelectors.selectDataOfCalculation);
   }

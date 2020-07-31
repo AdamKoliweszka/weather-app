@@ -35,6 +35,10 @@ export const selectHumidity = createSelector(
   selectCurrentWeatherState,
   (state) => (state.main ? state.main.humidity : null)
 );
+export const selectCloudiness = createSelector(
+  selectCurrentWeatherState,
+  (state) => (state.clouds ? state.clouds.all : null)
+);
 
 export const selectDataOfCalculation = createSelector(
   selectCurrentWeatherState,

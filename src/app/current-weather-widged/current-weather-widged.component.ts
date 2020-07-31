@@ -47,4 +47,7 @@ export class CurrentWeatherWidgedComponent implements OnInit {
   get humidityLevel$(): Observable<number> {
     return this.currentWeatherDataContainerService.humidity;
   }
+  get cloudinessLevel$(): Observable<number> {
+    return this.currentWeatherDataContainerService.cloudiness;
+  }
 }

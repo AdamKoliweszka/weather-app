@@ -11,7 +11,7 @@
   grid-template-areas:
     "calculate-info header header header refresh-button"
     "temperature main . sidebar status-icon"
-    "humidity-level footer footer footer footer";
+    "humidity-level footer1 cloudiness-level footer footer";
 }
 
 .refresh-button {
@@ -32,4 +32,8 @@
 
 .humidity-level {
   grid-area: humidity-level;
+}
+
+.cloudiness-level {
+  grid-area: cloudiness-level;
 }

@@ -17,6 +17,7 @@ import { TemperatureToCelsiusPipe } from './temperature-to-celsius.pipe';
 import { WidgedCalculationInfoComponent } from './widged-calculation-info/widged-calculation-info.component';
 import { WeatherStatusComponent } from './weather-status/weather-status.component';
 import { HumiditiLevelComponent } from './humiditi-level/humiditi-level.component';
+import { CloudinessComponent } from './cloudiness/cloudiness.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HumiditiLevelComponent } from './humiditi-level/humiditi-level.componen
     WidgedCalculationInfoComponent,
     WeatherStatusComponent,
     HumiditiLevelComponent,
+    CloudinessComponent,
   ],
   imports: [
     BrowserModule,
