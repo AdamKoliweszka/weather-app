@@ -10,10 +10,14 @@
   grid-template-rows: auto;
   grid-template-areas:
     "header header header header refresh-button"
-    "main main . sidebar sidebar"
+    "temperature main . sidebar sidebar"
     "footer footer footer footer footer";
 }
 
 .refresh-button {
   grid-area: refresh-button;
+}
+
+.temperature {
+  grid-area: temperature;
 }

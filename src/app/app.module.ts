@@ -12,6 +12,7 @@ import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { CurrentWeatherStateModule } from "./current-weather-state/current-weather-state.module";
 import { CurrentWeatherWidgedComponent } from "./current-weather-widged/current-weather-widged.component";
 import { WidgedRefreshButtonComponent } from './widged-refresh-button/widged-refresh-button.component';
+import { WidgedTemperatureComponent } from './widged-temperature/widged-temperature.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { WidgedRefreshButtonComponent } from './widged-refresh-button/widged-ref
     CurrentWeatherPageComponent,
     CurrentWeatherWidgedComponent,
     WidgedRefreshButtonComponent,
+    WidgedTemperatureComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,5 +4,9 @@
       (clickButton)="refreshWeather()"
     ></app-widged-refresh-button>
   </div>
-  {{ currentTemperature$ | async }}
+  <div class="temperature">
+    <app-widged-temperature
+      [temperature]="currentTemperature$ | async"
+    ></app-widged-temperature>
+  </div>
 </div>
