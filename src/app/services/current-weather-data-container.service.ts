@@ -51,4 +51,10 @@ export class CurrentWeatherDataContainerService {
   get iconId(): Observable<string> {
     return this.store.select(CurrentWeatherSelectors.selectIconId);
   }
+
+  get athmosphericPressure(): Observable<number> {
+    return this.store.select(
+      CurrentWeatherSelectors.selectAthmosphericPressure
+    );
+  }
 }

@@ -9,9 +9,9 @@
   grid-template-columns: 30% 10% 20% 20% 20%;
   grid-template-rows: auto;
   grid-template-areas:
-    "calculate-info header header header refresh-button"
-    "temperature main . sidebar status-icon"
-    "humidity-level footer1 cloudiness-level footer footer";
+    "calculate-info . . . refresh-button"
+    "temperature . . . status-icon"
+    "humidity-level . cloudiness-level athmospheric-pressure athmospheric-pressure";
 }
 
 .refresh-button {
@@ -36,4 +36,8 @@
 
 .cloudiness-level {
   grid-area: cloudiness-level;
+}
+
+.athmospheric-pressure {
+  grid-area: athmospheric-pressure;
 }
