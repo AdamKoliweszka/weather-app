@@ -1,0 +1,15 @@
+.container {
+  background: linear-gradient(#aeb1b8, #39415a);
+  // background: linear-gradient(#D75B05 ,#D83401 )
+  // background: linear-gradient(#38528D ,#111F62 )
+  width: 33vw;
+  height: 33vh;
+  border-radius: 4vh;
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+}

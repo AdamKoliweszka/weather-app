@@ -10,9 +10,14 @@ import { EffectsModule } from "@ngrx/effects";
 import { environment } from "src/environments/environment";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { CurrentWeatherStateModule } from "./current-weather-state/current-weather-state.module";
+import { CurrentWeatherWidgedComponent } from "./current-weather-widged/current-weather-widged.component";
 
 @NgModule({
-  declarations: [AppComponent, CurrentWeatherPageComponent],
+  declarations: [
+    AppComponent,
+    CurrentWeatherPageComponent,
+    CurrentWeatherWidgedComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
