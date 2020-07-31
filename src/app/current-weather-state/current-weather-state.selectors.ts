@@ -45,3 +45,7 @@ export const selectCityName = createSelector(
   selectCurrentWeatherState,
   (state) => state.name
 );
+
+export const selectIconId = createSelector(selectCurrentWeatherState, (state) =>
+  state.weather && state.weather.length > 0 ? state.weather[0].icon : null
+);

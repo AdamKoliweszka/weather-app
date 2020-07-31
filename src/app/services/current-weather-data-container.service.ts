@@ -44,4 +44,8 @@ export class CurrentWeatherDataContainerService {
   get nameOfCity(): Observable<string> {
     return this.store.select(CurrentWeatherSelectors.selectCityName);
   }
+
+  get iconId(): Observable<string> {
+    return this.store.select(CurrentWeatherSelectors.selectIconId);
+  }
 }

@@ -39,4 +39,8 @@ export class CurrentWeatherWidgedComponent implements OnInit {
   get nameOfCity$(): Observable<string> {
     return this.currentWeatherDataContainerService.nameOfCity;
   }
+
+  get iconId$(): Observable<string> {
+    return this.currentWeatherDataContainerService.iconId;
+  }
 }

@@ -10,7 +10,7 @@
   grid-template-rows: auto;
   grid-template-areas:
     "calculate-info header header header refresh-button"
-    "temperature main . sidebar sidebar"
+    "temperature main . sidebar status-icon"
     "footer footer footer footer footer";
 }
 
@@ -24,4 +24,8 @@
 
 .calculate-info {
   grid-area: calculate-info;
+}
+
+.status-icon {
+  grid-area: status-icon;
 }

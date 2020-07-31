@@ -17,4 +17,7 @@
       [timeOfCalculation]="dataOfCalculation$ | async"
     ></app-widged-calculation-info>
   </div>
+  <div class="status-icon">
+    <app-weather-status [iconId]="iconId$ | async"></app-weather-status>
+  </div>
 </div>
