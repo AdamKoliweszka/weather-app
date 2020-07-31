@@ -1,10 +1,10 @@
 import { createSelector, createFeatureSelector } from "@ngrx/store";
 import { currentWeatherStateKey } from "./current-weather-state.key";
-import { CurrentWeather } from "../interfaces/current-weather.interface";
+import { CurrentWeatherState } from "./current-weather-state.reducers";
 
-export const selectCurrentWeatherState = createFeatureSelector<CurrentWeather>(
-  currentWeatherStateKey
-);
+export const selectCurrentWeatherState = createFeatureSelector<
+  CurrentWeatherState
+>(currentWeatherStateKey);
 
 export const selectTemperature = createSelector(
   selectCurrentWeatherState,
@@ -34,4 +34,14 @@ export const selectPressure = createSelector(
 export const selectHumidity = createSelector(
   selectCurrentWeatherState,
   (state) => (state.main ? state.main.humidity : null)
+);
+
+export const selectDataOfCalculation = createSelector(
+  selectCurrentWeatherState,
+  (state) => state.dt
+);
+
+export const selectCityName = createSelector(
+  selectCurrentWeatherState,
+  (state) => state.name
 );

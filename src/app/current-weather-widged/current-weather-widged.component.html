@@ -11,4 +11,10 @@
       [minTemperature]="minTemperature$ | async"
     ></app-widged-temperature>
   </div>
+  <div class="calculate-info">
+    <app-widged-calculation-info
+      [city]="nameOfCity$ | async"
+      [timeOfCalculation]="dataOfCalculation$ | async"
+    ></app-widged-calculation-info>
+  </div>
 </div>

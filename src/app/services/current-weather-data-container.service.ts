@@ -37,4 +37,11 @@ export class CurrentWeatherDataContainerService {
   get humidity(): Observable<number> {
     return this.store.select(CurrentWeatherSelectors.selectHumidity);
   }
+  get dataOfCalculation(): Observable<Date> {
+    return this.store.select(CurrentWeatherSelectors.selectDataOfCalculation);
+  }
+
+  get nameOfCity(): Observable<string> {
+    return this.store.select(CurrentWeatherSelectors.selectCityName);
+  }
 }

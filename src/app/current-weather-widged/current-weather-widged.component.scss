@@ -9,7 +9,7 @@
   grid-template-columns: 30% 10% 20% 20% 20%;
   grid-template-rows: auto;
   grid-template-areas:
-    "header header header header refresh-button"
+    "calculate-info header header header refresh-button"
     "temperature main . sidebar sidebar"
     "footer footer footer footer footer";
 }
@@ -20,4 +20,8 @@
 
 .temperature {
   grid-area: temperature;
+}
+
+.calculate-info {
+  grid-area: calculate-info;
 }

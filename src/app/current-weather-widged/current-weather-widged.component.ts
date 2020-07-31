@@ -31,4 +31,12 @@ export class CurrentWeatherWidgedComponent implements OnInit {
   get maxTemperature$(): Observable<number> {
     return this.currentWeatherDataContainerService.maxTemperature;
   }
+
+  get dataOfCalculation$(): Observable<Date> {
+    return this.currentWeatherDataContainerService.dataOfCalculation;
+  }
+
+  get nameOfCity$(): Observable<string> {
+    return this.currentWeatherDataContainerService.nameOfCity;
+  }
 }
