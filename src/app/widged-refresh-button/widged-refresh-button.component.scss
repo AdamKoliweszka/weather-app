@@ -1,4 +1,4 @@
-.refresh-icon {
+.clickable {
   cursor: pointer;
 }
 .icon-container {
@@ -7,15 +7,4 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
-
-.in-refreshing-state {
-  cursor: default;
-  animation: spin 3s linear infinite;
-}
-
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
 }
