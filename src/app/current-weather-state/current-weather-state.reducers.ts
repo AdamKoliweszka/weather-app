@@ -22,6 +22,7 @@ export interface CurrentWeatherState {
   id: number;
   name: string;
   cod: number;
+  isRefreshing: boolean;
 }
 
 const initialState: CurrentWeatherState = {
@@ -38,6 +39,7 @@ const initialState: CurrentWeatherState = {
   id: 0,
   name: null,
   cod: 0,
+  isRefreshing: false,
 };
 
 const currentWeatherReducer = createReducer(
@@ -45,6 +47,15 @@ const currentWeatherReducer = createReducer(
   on(currentWeatherActions.setCurrentWeather, (state, { currentWeather }) => ({
     ...currentWeather,
     dt: new Date(currentWeather.dt * 1000),
+    isRefreshing: false,
+  })),
+  on(currentWeatherActions.setIsRefreshing, (state, { isRefreshing }) => ({
+    ...state,
+    isRefreshing,
+  })),
+  on(currentWeatherActions.loadCurrentWeather, (state) => ({
+    ...state,
+    isRefreshing: true,
   }))
 );
 

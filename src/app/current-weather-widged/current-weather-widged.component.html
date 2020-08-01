@@ -1,7 +1,7 @@
 <div class="container">
   <div class="refresh-button">
     <app-widged-refresh-button
-      [isInRefreshingState]="false"
+      [isInRefreshingState]="isRefreshing$ | async"
       (clickButton)="refreshWeather()"
     ></app-widged-refresh-button>
   </div>

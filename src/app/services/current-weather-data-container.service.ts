@@ -57,4 +57,8 @@ export class CurrentWeatherDataContainerService {
       CurrentWeatherSelectors.selectAthmosphericPressure
     );
   }
+
+  get isRefreshing(): Observable<boolean> {
+    return this.store.select(CurrentWeatherSelectors.selectIsRefreshing);
+  }
 }

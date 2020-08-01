@@ -58,3 +58,8 @@ export const selectAthmosphericPressure = createSelector(
   selectCurrentWeatherState,
   (state) => (state.main ? state.main.pressure : null)
 );
+
+export const selectIsRefreshing = createSelector(
+  selectCurrentWeatherState,
+  (state) => state.isRefreshing
+);

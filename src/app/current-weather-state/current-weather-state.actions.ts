@@ -9,3 +9,8 @@ export const setCurrentWeather = createAction(
 export const loadCurrentWeather = createAction(
   "[CURRENT_WEATHER] Load current weather"
 );
+
+export const setIsRefreshing = createAction(
+  "[CURRENT_WEATHER] Set is refreshing flag",
+  props<{ isRefreshing: boolean }>()
+);

@@ -53,4 +53,7 @@ export class CurrentWeatherWidgedComponent implements OnInit {
   get athmosphericPressure$(): Observable<number> {
     return this.currentWeatherDataContainerService.athmosphericPressure;
   }
+  get isRefreshing$(): Observable<boolean> {
+    return this.currentWeatherDataContainerService.isRefreshing;
+  }
 }
