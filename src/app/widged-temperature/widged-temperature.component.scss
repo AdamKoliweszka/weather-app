@@ -1,5 +1,5 @@
 @import "../../variables.scss";
-.container {
+.container-temperature {
   font-size: $large-font-size;
   color: white;
   text-align: center;
@@ -11,4 +11,11 @@
   justify-content: space-around;
   font-size: $medium-font-size;
   color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
 }
