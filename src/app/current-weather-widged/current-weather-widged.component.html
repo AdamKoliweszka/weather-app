@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="refresh-button">
+    <app-widged-refresh-button
+      [isInRefreshingState]="isRefreshing$ | async"
+      (clickButton)="refreshWeather()"
+    ></app-widged-refresh-button>
+  </div>
+  <div class="temperature">
+    <app-widged-temperature
+      [temperature]="currentTemperature$ | async"
+      [maxTemperature]="maxTemperature$ | async"
+      [minTemperature]="minTemperature$ | async"
+    ></app-widged-temperature>
+  </div>
+  <div class="calculate-info">
+    <app-widged-calculation-info
+      [city]="nameOfCity$ | async"
+      [timeOfCalculation]="dataOfCalculation$ | async"
+    ></app-widged-calculation-info>
+  </div>
+  <div class="status-icon">
+    <app-weather-status [iconId]="iconId$ | async"></app-weather-status>
+  </div>
+
+  <div class="humidity-level">
+    <app-humiditi-level
+      [humidityLevel]="humidityLevel$ | async"
+    ></app-humiditi-level>
+  </div>
+
+  <div class="cloudiness-level">
+    <app-cloudiness
+      [cloudinessLevel]="cloudinessLevel$ | async"
+    ></app-cloudiness>
+  </div>
+
+  <div class="athmospheric-pressure">
+    <app-athmospheric-pressure
+      [athmosphericPressure]="athmosphericPressure$ | async"
+    ></app-athmospheric-pressure>
+  </div>
+</div>

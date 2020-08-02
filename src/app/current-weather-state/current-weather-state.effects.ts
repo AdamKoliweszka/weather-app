@@ -5,6 +5,7 @@ import { CurrentWeatherApiService } from "../services/current-weather-api.servic
 import {
   loadCurrentWeather,
   setCurrentWeather,
+  setIsRefreshing,
 } from "./current-weather-state.actions";
 
 @Injectable()

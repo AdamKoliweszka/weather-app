@@ -37,4 +37,28 @@ export class CurrentWeatherDataContainerService {
   get humidity(): Observable<number> {
     return this.store.select(CurrentWeatherSelectors.selectHumidity);
   }
+  get cloudiness(): Observable<number> {
+    return this.store.select(CurrentWeatherSelectors.selectCloudiness);
+  }
+  get dataOfCalculation(): Observable<Date> {
+    return this.store.select(CurrentWeatherSelectors.selectDataOfCalculation);
+  }
+
+  get nameOfCity(): Observable<string> {
+    return this.store.select(CurrentWeatherSelectors.selectCityName);
+  }
+
+  get iconId(): Observable<string> {
+    return this.store.select(CurrentWeatherSelectors.selectIconId);
+  }
+
+  get athmosphericPressure(): Observable<number> {
+    return this.store.select(
+      CurrentWeatherSelectors.selectAthmosphericPressure
+    );
+  }
+
+  get isRefreshing(): Observable<boolean> {
+    return this.store.select(CurrentWeatherSelectors.selectIsRefreshing);
+  }
 }

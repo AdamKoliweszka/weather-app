@@ -1,0 +1,50 @@
+.container {
+  background: linear-gradient(#aeb1b8, #39415a);
+  //background: linear-gradient(#d75b05, #d83401);
+  //background: linear-gradient(#38528d, #111f62);
+  padding: 1vw;
+  width: 33vw;
+  height: 33vh;
+  border-radius: 4vh;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 10% 80% 10%;
+  grid-template-areas:
+    "calculate-info . refresh-button"
+    "temperature . status-icon"
+    "humidity-level cloudiness-level athmospheric-pressure";
+}
+
+.refresh-button {
+  grid-area: refresh-button;
+}
+
+.temperature {
+  grid-area: temperature;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.calculate-info {
+  grid-area: calculate-info;
+}
+
+.status-icon {
+  grid-area: status-icon;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.humidity-level {
+  grid-area: humidity-level;
+}
+
+.cloudiness-level {
+  grid-area: cloudiness-level;
+}
+
+.athmospheric-pressure {
+  grid-area: athmospheric-pressure;
+}
