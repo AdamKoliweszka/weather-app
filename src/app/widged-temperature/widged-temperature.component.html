@@ -1,8 +1,5 @@
 <div class="container">
   <div>
-    <div class="container-temperature">
-      {{ temperature | temperatureToCelsius | number: "1.1-1" }}°C
-    </div>
     <div class="container-temperature-amplitude">
       <div>
         <svg
@@ -34,6 +31,13 @@
           >{{ minTemperature | temperatureToCelsius | number: "1.1-1" }}°C</span
         >
       </div>
+    </div>
+    <div class="container-temperature">
+      {{ temperature | temperatureToCelsius | number: "1.1-1" }}°C
+    </div>
+    <div class="temperature-feels-like">
+      Odczuwalna:
+      {{ feelsLikeTemperature | temperatureToCelsius | number: "1.1-1" }}°C
     </div>
   </div>
 </div>

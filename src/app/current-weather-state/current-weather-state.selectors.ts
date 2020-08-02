@@ -24,6 +24,11 @@ export const selectMinTemperature = createSelector(
 export const selectMaxTemperature = createSelector(
   selectCurrentWeatherState,
   (state) => (state.main ? state.main.temp_max : null)
+); //selectFeelsLikeTemperature
+
+export const selectFeelsLikeTemperature = createSelector(
+  selectCurrentWeatherState,
+  (state) => (state.main ? state.main.feels_like : null)
 );
 
 export const selectPressure = createSelector(

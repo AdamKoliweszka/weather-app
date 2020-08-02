@@ -30,6 +30,11 @@ export class CurrentWeatherDataContainerService {
   }
   get maxTemperature(): Observable<number> {
     return this.store.select(CurrentWeatherSelectors.selectMaxTemperature);
+  } //feelsLikeTemperature
+  get feelsLikeTemperature(): Observable<number> {
+    return this.store.select(
+      CurrentWeatherSelectors.selectFeelsLikeTemperature
+    );
   }
   get pressure(): Observable<number> {
     return this.store.select(CurrentWeatherSelectors.selectPressure);
