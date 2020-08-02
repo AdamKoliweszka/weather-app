@@ -4,7 +4,8 @@
     alt="Refresh button"
     (click)="refreshWeather()"
     [ngClass]="{
-      clickable: !isInRefreshingState
+      clickable: !isInRefreshingState,
+      icon: true
     }"
     [@rotateOnRefreshing]="isInRefreshingState"
   />
