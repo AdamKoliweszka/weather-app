@@ -1,13 +1,20 @@
 .container {
-  background: linear-gradient(#aeb1b8, #39415a);
-  //background: linear-gradient(#d75b05, #d83401);
-  //background: linear-gradient(#38528d, #111f62);
   padding: 2vw;
   width: 33vw;
   height: 33vh;
   border-radius: 4vh;
   display: flex;
   flex-direction: column;
+}
+
+.morning-background {
+  background: linear-gradient(#38528d, #111f62);
+}
+.day-background {
+  background: linear-gradient(#d75b05, #d83401);
+}
+.night-background {
+  background: linear-gradient(#aeb1b8, #39415a);
 }
 
 .top-bar {
