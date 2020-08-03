@@ -1,0 +1,12 @@
+<div class="icon-container">
+  <img
+    src="../../../../assets/refresh.svg"
+    alt="Refresh button"
+    (click)="refreshWeather()"
+    [ngClass]="{
+      clickable: !isInRefreshingState,
+      icon: true
+    }"
+    [@rotateOnRefreshing]="isInRefreshingState"
+  />
+</div>

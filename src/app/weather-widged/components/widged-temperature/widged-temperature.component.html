@@ -1,0 +1,37 @@
+<div class="container">
+  <div>
+    <div class="container-temperature-amplitude">
+      <div>
+        <object
+          type="image/svg+xml"
+          data="../../../../assets/up.svg"
+          class="icon"
+        >
+          Max temperature
+        </object>
+        <span
+          >{{ maxTemperature | temperatureToCelsius | number: "1.1-1" }}°C</span
+        >
+      </div>
+      <div>
+        <object
+          type="image/svg+xml"
+          data="../../../../assets/down.svg"
+          class="icon"
+        >
+          Min temperature
+        </object>
+        <span
+          >{{ minTemperature | temperatureToCelsius | number: "1.1-1" }}°C</span
+        >
+      </div>
+    </div>
+    <div class="container-temperature">
+      {{ temperature | temperatureToCelsius | number: "1.1-1" }}°C
+    </div>
+    <div class="temperature-feels-like">
+      Odczuwalna:
+      {{ feelsLikeTemperature | temperatureToCelsius | number: "1.1-1" }}°C
+    </div>
+  </div>
+</div>

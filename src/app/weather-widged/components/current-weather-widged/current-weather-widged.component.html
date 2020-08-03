@@ -1,0 +1,36 @@
+<div
+  class="container"
+  *ngIf="dataOfCalculation$ | async as date"
+  [ngClass]="{
+    'morning-background': (date | dateToTimeOfDay) === TimeOfDay.MORNING,
+    'day-background': (date | dateToTimeOfDay) === TimeOfDay.DAY,
+    'night-background': (date | dateToTimeOfDay) === TimeOfDay.NIGHT
+  }"
+>
+  <div class="top-bar">
+    <app-widged-calculation-info
+      [city]="nameOfCity$ | async"
+      [timeOfCalculation]="date"
+    ></app-widged-calculation-info>
+    <app-widged-refresh-button
+      [isInRefreshingState]="isRefreshing$ | async"
+      (clickButton)="refreshWeather()"
+    ></app-widged-refresh-button>
+  </div>
+
+  <div class="main-content">
+    <app-weather-status [iconId]="iconId$ | async"></app-weather-status>
+    <app-widged-temperature
+      [temperature]="currentTemperature$ | async"
+      [maxTemperature]="maxTemperature$ | async"
+      [minTemperature]="minTemperature$ | async"
+      [feelsLikeTemperature]="feelsLikeTemperature$ | async"
+    ></app-widged-temperature>
+  </div>
+
+  <app-details-weather
+    [humidityLevel]="humidityLevel$ | async"
+    [cloudinessLevel]="cloudinessLevel$ | async"
+    [athmosphericPressure]="athmosphericPressure$ | async"
+  ></app-details-weather>
+</div>

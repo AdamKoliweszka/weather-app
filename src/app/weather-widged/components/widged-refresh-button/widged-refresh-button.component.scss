@@ -1,0 +1,13 @@
+.clickable {
+  cursor: pointer;
+}
+.icon-container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+}
+.icon {
+  margin-left: auto;
+}
