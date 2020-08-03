@@ -10,6 +10,8 @@
   border-radius: 4vmin;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 0.5vmin 1vmin rgba(0, 0, 0, 0.16),
+    0 0.5vmin 1vmin rgba(0, 0, 0, 0.23);
 }
 
 .morning-background {
