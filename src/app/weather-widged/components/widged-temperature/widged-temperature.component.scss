@@ -18,6 +18,9 @@
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
+  position: relative;
+  animation-name: on-start-temperature;
+  animation-duration: 1s;
 }
 
 .temperature-feels-like {
@@ -30,4 +33,13 @@
   fill: white;
   margin-right: 0.5vmin;
   height: $small-font-size;
+}
+
+@keyframes on-start-temperature {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
 }
