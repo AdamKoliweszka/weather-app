@@ -20,6 +20,7 @@ import { HumiditiLevelComponent } from "./humiditi-level/humiditi-level.componen
 import { CloudinessComponent } from "./cloudiness/cloudiness.component";
 import { AthmosphericPressureComponent } from "./athmospheric-pressure/athmospheric-pressure.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { DetailsWeatherComponent } from './details-weather/details-weather.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     HumiditiLevelComponent,
     CloudinessComponent,
     AthmosphericPressureComponent,
+    DetailsWeatherComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,35 @@
+@import "../../variables.scss";
+
+.bottom-bar {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.athmospheric-pressure-container {
+  color: white;
+  text-align: center;
+  display: flex;
+  font-size: $medium-font-size;
+}
+
+.cloudiness-container {
+  color: white;
+  text-align: center;
+  display: flex;
+  font-size: $medium-font-size;
+}
+
+.humidity-container {
+  color: white;
+  text-align: center;
+  display: flex;
+  font-size: $medium-font-size;
+}
+
+svg {
+  fill: white;
+  height: $medium-font-size;
+}

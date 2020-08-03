@@ -20,17 +20,9 @@
     ></app-widged-temperature>
   </div>
 
-  <div class="bottom-bar">
-    <app-humiditi-level
-      [humidityLevel]="humidityLevel$ | async"
-    ></app-humiditi-level>
-
-    <app-cloudiness
-      [cloudinessLevel]="cloudinessLevel$ | async"
-    ></app-cloudiness>
-
-    <app-athmospheric-pressure
-      [athmosphericPressure]="athmosphericPressure$ | async"
-    ></app-athmospheric-pressure>
-  </div>
+  <app-details-weather
+    [humidityLevel]="humidityLevel$ | async"
+    [cloudinessLevel]="cloudinessLevel$ | async"
+    [athmosphericPressure]="athmosphericPressure$ | async"
+  ></app-details-weather>
 </div>
