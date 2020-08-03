@@ -1,5 +1,5 @@
 import { Injectable, OnDestroy } from "@angular/core";
-import { CurrentWeatherDataContainerService } from "./current-weather-data-container.service";
+import { CurrentWeatherDataContainerService } from "../current-weather-data-container/current-weather-data-container.service";
 import { Observable, interval, Subscription } from "rxjs";
 import { environment } from "src/environments/environment";
 import { startWith } from "rxjs/operators";
