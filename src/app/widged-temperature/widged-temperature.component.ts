@@ -9,6 +9,7 @@ export class WidgedTemperatureComponent implements OnInit {
   @Input() temperature: number;
   @Input() minTemperature: number;
   @Input() maxTemperature: number;
+  @Input() feelsLikeTemperature: number;
   constructor() {}
 
   ngOnInit() {}
