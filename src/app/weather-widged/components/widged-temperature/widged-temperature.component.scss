@@ -20,19 +20,13 @@
   height: 100%;
 }
 
-svg {
-  fill: white;
-
-  height: $small-font-size;
-}
-
 .temperature-feels-like {
   font-size: $small-font-size;
   color: white;
   text-align: center;
 }
 
-.svg {
+.icon {
   fill: white;
   margin-right: 0.5vmin;
   height: $small-font-size;
