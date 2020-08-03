@@ -9,11 +9,9 @@ import { EffectsModule } from "@ngrx/effects";
 import { environment } from "src/environments/environment";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { CurrentWeatherPageComponent } from "./current-weather-page/current-weather-page.component";
-import { WeatherWidgedModule } from "./weather-widged/weather-widged.module";
 
 @NgModule({
-  declarations: [AppComponent, CurrentWeatherPageComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,7 +23,6 @@ import { WeatherWidgedModule } from "./weather-widged/weather-widged.module";
       logOnly: environment.production,
     }),
     EffectsModule.forRoot([]),
-    WeatherWidgedModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

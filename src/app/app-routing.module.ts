@@ -1,8 +1,12 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { CurrentWeatherPageComponent } from "./current-weather-page/current-weather-page.component";
 
-const routes: Routes = [{ component: CurrentWeatherPageComponent, path: "" }];
+const routes: Routes = [
+  {
+    path: "",
+    loadChildren: () => import("./home/home.module").then((m) => m.HomeModule),
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
