@@ -22,7 +22,7 @@ import {
       state(
         "0",
         style({
-          transform: "rotate(180deg)",
+          transform: "rotate(-180deg)",
         })
       ),
       transition("0=>1", animate("1500ms")),
