@@ -1,8 +1,16 @@
-<div class="container">
+<div
+  class="container"
+  *ngIf="dataOfCalculation$ | async as date"
+  [ngClass]="{
+    'morning-background': (date | dateToTimeOfDay) === TimeOfDay.MORNING,
+    'day-background': (date | dateToTimeOfDay) === TimeOfDay.DAY,
+    'night-background': (date | dateToTimeOfDay) === TimeOfDay.NIGHT
+  }"
+>
   <div class="top-bar">
     <app-widged-calculation-info
       [city]="nameOfCity$ | async"
-      [timeOfCalculation]="dataOfCalculation$ | async"
+      [timeOfCalculation]="date"
     ></app-widged-calculation-info>
     <app-widged-refresh-button
       [isInRefreshingState]="isRefreshing$ | async"

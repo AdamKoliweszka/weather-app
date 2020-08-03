@@ -1,7 +1,6 @@
+@import "../../variables.scss";
+
 .container {
-  background: linear-gradient(#aeb1b8, #39415a);
-  //background: linear-gradient(#d75b05, #d83401);
-  //background: linear-gradient(#38528d, #111f62);
   padding: 2vw;
   width: 33vw;
   height: 33vh;
@@ -10,17 +9,19 @@
   flex-direction: column;
 }
 
+.morning-background {
+  background: linear-gradient($first-color-morning, $second-color-morning);
+}
+.day-background {
+  background: linear-gradient($first-color-day, $second-color-day);
+}
+.night-background {
+  background: linear-gradient($first-color-night, $second-color-night);
+}
+
 .top-bar {
   width: 100%;
   height: 20%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.bottom-bar {
-  width: 100%;
-  height: 10%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

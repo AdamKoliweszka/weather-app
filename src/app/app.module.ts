@@ -18,6 +18,7 @@ import { WidgedCalculationInfoComponent } from "./widged-calculation-info/widged
 import { WeatherStatusComponent } from "./weather-status/weather-status.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { DetailsWeatherComponent } from "./details-weather/details-weather.component";
+import { DateToTimeOfDayPipe } from './date-to-time-of-day.pipe';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { DetailsWeatherComponent } from "./details-weather/details-weather.compo
     WidgedCalculationInfoComponent,
     WeatherStatusComponent,
     DetailsWeatherComponent,
+    DateToTimeOfDayPipe,
   ],
   imports: [
     BrowserModule,
