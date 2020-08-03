@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Actions, Effect, ofType } from "@ngrx/effects";
 import { mergeMap, map } from "rxjs/operators";
-import { CurrentWeatherApiService } from "../services/current-weather-api.service";
+import { CurrentWeatherApiService } from "../../services/current-weather-api/current-weather-api.service";
 import {
   loadCurrentWeather,
   setCurrentWeather,

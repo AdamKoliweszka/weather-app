@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from "@angular/core";
 import { environment } from "src/environments/environment";
-import { TimeOfDay } from "./enum/time-of-day.enum";
+import { TimeOfDay } from "../../enums/time-of-day.enum";
 
 @Pipe({
   name: "dateToTimeOfDay",

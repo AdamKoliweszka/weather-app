@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
-import { CurrentWeather } from "../interfaces/current-weather.interface";
+import { CurrentWeather } from "../../interfaces/current-weather.interface";
 import { Store } from "@ngrx/store";
-import * as CurrentWeatherSelectors from "../current-weather-state/current-weather-state.selectors";
-import * as CurrentWeatherActions from "../current-weather-state/current-weather-state.actions";
+import * as CurrentWeatherSelectors from "../../states/current-weather-state/current-weather-state.selectors";
+import * as CurrentWeatherActions from "../../states/current-weather-state/current-weather-state.actions";
 import { Observable } from "rxjs";
 
 @Injectable({

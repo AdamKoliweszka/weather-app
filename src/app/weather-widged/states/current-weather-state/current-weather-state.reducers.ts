@@ -1,12 +1,12 @@
 import * as currentWeatherActions from "./current-weather-state.actions";
 import { createReducer, on, Action } from "@ngrx/store";
-import { CurrentWeather } from "../interfaces/current-weather.interface";
-import { Clouds } from "../interfaces/clouds.interface";
-import { Sys } from "../interfaces/sys.interface";
-import { Wind } from "../interfaces/wind.interface";
-import { Main } from "../interfaces/main.interface";
-import { Weather } from "../interfaces/weather.interface";
-import { Coordinate } from "../interfaces/coordinate.interface";
+import { CurrentWeather } from "../../interfaces/current-weather.interface";
+import { Clouds } from "../../interfaces/clouds.interface";
+import { Sys } from "../../interfaces/sys.interface";
+import { Wind } from "../../interfaces/wind.interface";
+import { Main } from "../../interfaces/main.interface";
+import { Weather } from "../../interfaces/weather.interface";
+import { Coordinate } from "../../interfaces/coordinate.interface";
 
 export interface CurrentWeatherState {
   coord: Coordinate;

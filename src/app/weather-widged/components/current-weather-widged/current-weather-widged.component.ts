@@ -1,9 +1,8 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { CurrentWeather } from "../interfaces/current-weather.interface";
-import { CurrentWeatherAutoRefreshService } from "../services/current-weather-auto-refresh.service";
-import { CurrentWeatherDataContainerService } from "../services/current-weather-data-container.service";
+import { CurrentWeatherAutoRefreshService } from "../../services/current-weather-auto-refresh/current-weather-auto-refresh.service";
+import { CurrentWeatherDataContainerService } from "../../services/current-weather-data-container/current-weather-data-container.service";
 import { Observable } from "rxjs";
-import { TimeOfDay } from "../enum/time-of-day.enum";
+import { TimeOfDay } from "../../enums/time-of-day.enum";
 
 @Component({
   selector: "app-current-weather-widged",
