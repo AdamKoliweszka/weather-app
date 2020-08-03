@@ -16,10 +16,8 @@ import { WidgedTemperatureComponent } from "./widged-temperature/widged-temperat
 import { TemperatureToCelsiusPipe } from "./temperature-to-celsius.pipe";
 import { WidgedCalculationInfoComponent } from "./widged-calculation-info/widged-calculation-info.component";
 import { WeatherStatusComponent } from "./weather-status/weather-status.component";
-import { HumiditiLevelComponent } from "./humiditi-level/humiditi-level.component";
-import { CloudinessComponent } from "./cloudiness/cloudiness.component";
-import { AthmosphericPressureComponent } from "./athmospheric-pressure/athmospheric-pressure.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { DetailsWeatherComponent } from "./details-weather/details-weather.component";
 
 @NgModule({
   declarations: [
@@ -31,9 +29,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     TemperatureToCelsiusPipe,
     WidgedCalculationInfoComponent,
     WeatherStatusComponent,
-    HumiditiLevelComponent,
-    CloudinessComponent,
-    AthmosphericPressureComponent,
+    DetailsWeatherComponent,
   ],
   imports: [
     BrowserModule,
